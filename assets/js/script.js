@@ -1,15 +1,12 @@
 import {BASE_URL} from "./constant.js";
 
-
-import {BASE_URL} from "./constant.js";
-
 let tbody =document.querySelector("tbody")
 
 
 async function allelementcekdim (endpoint){
 
     try {
-        const response =await axios.get($(BASE_URL)/$(endpoint))
+        const response =await axios.get(`${BASE_URL}/${endpoint}`)
         rendertable(response.data) 
         
     
